@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 public class RomanPrinterTest {
     
     @Test
-    public void TestIPrinter(){
+    public void testIPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1)).thenReturn("I");
             String letterI =
@@ -30,7 +30,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestVPrinter(){
+    public void testVPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(5)).thenReturn("V");
             String letterV =
@@ -46,7 +46,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestXPrinter(){
+    public void testXPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(10)).thenReturn("X");
             String letterX =
@@ -62,7 +62,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestLPrinter(){
+    public void testLPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(50)).thenReturn("L");
             String letterL =
@@ -77,7 +77,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestCPrinter(){
+    public void testCPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(100)).thenReturn("C");
             String letterC =
@@ -93,7 +93,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestDPrinter(){
+    public void testDPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(500)).thenReturn("D");
             String letterD =
@@ -109,7 +109,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestMPrinter(){
+    public void testMPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1000)).thenReturn("M");
             String letterM =
@@ -125,7 +125,7 @@ public class RomanPrinterTest {
     }
 
     @Test (expected = IllegalArgumentException.class)
-    public void VoidRomanNumber(){
+    public void voidRomanNumber(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1)).thenReturn("");
             RomanPrinter romanPrinter = new RomanPrinter();
@@ -134,7 +134,7 @@ public class RomanPrinterTest {
     }
 
     @Test (expected = IllegalArgumentException.class)
-    public void InvalidRomanNumber(){
+    public void invalidRomanNumber(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1)).thenReturn("A");
             RomanPrinter romanPrinter = new RomanPrinter();
@@ -143,7 +143,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestIIPrinter(){
+    public void testIIPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(() -> IntegerToRoman.convert(2)).thenReturn("II");
             String expected =
@@ -159,7 +159,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestIVPrinter(){
+    public void testIVPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(4)).thenReturn("IV");
             String expected =
@@ -175,7 +175,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestVIPrinter(){
+    public void testVIPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(() -> IntegerToRoman.convert(6)).thenReturn("VI");
             String expected =
@@ -191,7 +191,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestIXPrinter(){
+    public void testIXPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(() -> IntegerToRoman.convert(9)).thenReturn("IX");
             String expected =
@@ -207,7 +207,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestXIPrinter(){
+    public void testXIPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(() -> IntegerToRoman.convert(11)).thenReturn("XI");
             String expected =
@@ -223,7 +223,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestXVPrinter(){
+    public void testXVPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(15)).thenReturn("XV");
             String expected =
@@ -239,7 +239,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestXXPrinter(){
+    public void testXXPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(20)).thenReturn("XX");
             String expected =
@@ -255,7 +255,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestXLPrinter(){
+    public void testXLPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(40)).thenReturn("XL");
             String expected =
@@ -271,7 +271,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestLXPrinter(){
+    public void testLXPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(60)).thenReturn("LX");
             String expected =
@@ -288,7 +288,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestXCPrinter(){
+    public void testXCPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(90)).thenReturn("XC");
             String expected =
@@ -304,7 +304,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestLIPrinter(){
+    public void testLIPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(51)).thenReturn("LI");
             String expected =
@@ -320,7 +320,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestLVPrinter(){
+    public void testLVPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(55)).thenReturn("LV");
             String expected =
@@ -337,7 +337,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestFourCIPrinter(){
+    public void testCIPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(101)).thenReturn("CI");
             String expected =
@@ -353,7 +353,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestFourCVPrinter(){
+    public void testCVPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(105)).thenReturn("CV");
             String expected =
@@ -369,7 +369,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestFourCXPrinter(){
+    public void testCXPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(110)).thenReturn("CX");
             String expected =
@@ -385,7 +385,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestFourCLPrinter(){
+    public void testCLPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(150)).thenReturn("CL");
             String expected =
@@ -401,7 +401,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestFourCCPrinter(){
+    public void testCCPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(200)).thenReturn("CC");
             String expected =
@@ -417,7 +417,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestCDPrinter(){
+    public void testCDPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(400)).thenReturn("CD");
             String expected =
@@ -433,7 +433,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestCMPrinter(){
+    public void testCMPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(900)).thenReturn("CM");
             String expected =
@@ -449,7 +449,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestDIPrinter(){
+    public void testDIPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(501)).thenReturn("DI");
             String expected =
@@ -465,7 +465,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestDVPrinter(){
+    public void testDVPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(505)).thenReturn("DV");
             String expected =
@@ -481,7 +481,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestDXPrinter(){
+    public void testDXPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(510)).thenReturn("DX");
             String expected =
@@ -497,7 +497,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestDLPrinter(){
+    public void testDLPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(550)).thenReturn("DL");
             String expected =
@@ -513,7 +513,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestDCPrinter(){
+    public void testDCPrinter(){
         try (MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(600)).thenReturn("DC");
             String expected =
@@ -529,7 +529,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestMIPrinter(){
+    public void testMIPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1001)).thenReturn("MI");
             String expected =
@@ -545,7 +545,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestMVPrinter(){
+    public void testMVPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1005)).thenReturn("MV");
             String expected =
@@ -561,7 +561,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestMXPrinter(){
+    public void testMXPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1010)).thenReturn("MX");
             String expected =
@@ -577,7 +577,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestMLPrinter(){
+    public void testMLPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1050)).thenReturn("ML");
             String expected =
@@ -593,7 +593,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestMCPrinter(){
+    public void testMCPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1100)).thenReturn("MC");
             String expected =
@@ -609,7 +609,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestMDPrinter(){
+    public void testMDPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1500)).thenReturn("MD");
             String expected =
@@ -625,7 +625,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void TestMMPrinter(){
+    public void testMMPrinter(){
         try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
             integerToRomanMockedStatic.when(()->IntegerToRoman.convert(2000)).thenReturn("MM");
             String expected =
