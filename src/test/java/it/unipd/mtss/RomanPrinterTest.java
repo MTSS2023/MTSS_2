@@ -132,4 +132,5 @@ public class RomanPrinterTest {
             romanPrinter.print(1);
         }
     }
+
 }
