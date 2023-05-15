@@ -69,16 +69,19 @@ public class RomanPrinter {
     }
 
     private static String printAsciiArt(String romanNumber){
-        String number = "";
         if(romanNumber.length()!=0) {
+            String number = "";
             for (int i = 0; i < 6; i++) {
                 for (int j = 0; j < romanNumber.length(); j++) {
                     number += printLine(romanNumber.substring(j, j + 1), i);
                 }
                 number += "\n";
             }
+            return number;
         }
-        return number;
+        else {
+            throw new IllegalArgumentException("Can't print a void expression");
+        }
     }
 
     private static String printLine(String letter, int index){
