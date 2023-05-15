@@ -15,75 +15,75 @@ public class IntegerToRomanTest {
     private IntegerToRoman convert;
     
     @Before
-    public void Before(){
+    public void before(){
         convert = new IntegerToRoman();
     }
     @Test
-    public void TestConvertOnetoRoman(){
+    public void testConvertOnetoRoman(){
         assertEquals("I", convert.convert(1));
     }
     @Test
-    public void TestConvertThreetoRoman(){
+    public void testConvertThreetoRoman(){
         assertEquals("III", convert.convert(3));
     }
     @Test
-    public void TestConvertFourtoRoman(){
+    public void testConvertFourtoRoman(){
         assertEquals("IV", convert.convert(4));
     }
     @Test
-    public void TestConvertFivetoRoman(){
+    public void testConvertFivetoRoman(){
         assertEquals("V", convert.convert(5));
     }
     @Test
-    public void TestConvertNinetoRoman(){
+    public void testConvertNinetoRoman(){
         assertEquals("IX", convert.convert(9));
     }
     @Test
-    public void TestConvertTentoRoman(){
+    public void testConvertTentoRoman(){
         assertEquals("X", convert.convert(10));
     }
     @Test
-    public void TestConvertFourtytoRoman(){
+    public void testConvertFourtytoRoman(){
         assertEquals("XL", convert.convert(40));
     }
     @Test
-    public void TestConvertFiftytoRoman(){
+    public void testConvertFiftytoRoman(){
         assertEquals("L", convert.convert(50));
     }
     @Test
-    public void TestConvertNinetytoRoman(){
+    public void testConvertNinetytoRoman(){
         assertEquals("XC", convert.convert(90));
     }
     @Test
-    public void TestConvertOneHundredtoRoman(){
+    public void testConvertOneHundredtoRoman(){
         assertEquals("C", convert.convert(100));
     }
     @Test
-    public void TestConvertFourHundredtoRoman(){
+    public void testConvertFourHundredtoRoman(){
         assertEquals("CD", convert.convert(400));
     }
     @Test
-    public void TestConvertFiveHundredtoRoman(){
+    public void testConvertFiveHundredtoRoman(){
         assertEquals("D", convert.convert(500));
     }
     @Test
-    public void TestConvertNineHundredtoRoman(){
+    public void testConvertNineHundredtoRoman(){
         assertEquals("CM", convert.convert(900));
     }
     @Test
-    public void TestConvertOneThousandtoRoman(){
+    public void testConvertOneThousandtoRoman(){
         assertEquals("M", convert.convert(1000));
     }
     @Test(expected = IllegalArgumentException.class)
-    public void TestConvertNumberMinorOnetoRoman(){
+    public void testConvertNumberMinorOnetoRoman(){
         convert.convert(0);
     }
     @Test(expected = IllegalArgumentException.class)
-    public void TestConvertNumberMajorOneThousandtoRoman(){
+    public void testConvertNumberMajorOneThousandtoRoman(){
         convert.convert(1001);
     }
     @Test(expected = NumberFormatException.class)
-    public void TestConvertStringtoRoman(){
+    public void testConvertStringtoRoman(){
         convert.convert(Integer.parseInt("a"));
     }
 
