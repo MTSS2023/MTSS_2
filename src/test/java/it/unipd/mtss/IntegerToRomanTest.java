@@ -74,7 +74,14 @@ public class IntegerToRomanTest {
     public void TestConvertOneThousandtoRoman(){
         assertEquals("M", convert.convert(1000));
     }
-
+    @Test(expected = IllegalArgumentException.class)
+    public void TestConvertNumberMinorOnetoRoman(){
+        convert.convert(0);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void TestConvertNumberMajorOneThousandtoRoman(){
+        convert.convert(1001);
+    }
     
 
 }
