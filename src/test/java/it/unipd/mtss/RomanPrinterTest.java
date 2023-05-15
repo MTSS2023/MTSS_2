@@ -124,4 +124,12 @@ public class RomanPrinterTest {
         }
     }
 
+    @Test (expected = IllegalArgumentException.class)
+    public void VoidRomanNumber(){
+        try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
+            integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1)).thenReturn("");
+            RomanPrinter romanPrinter = new RomanPrinter();
+            romanPrinter.print(1);
+        }
+    }
 }
