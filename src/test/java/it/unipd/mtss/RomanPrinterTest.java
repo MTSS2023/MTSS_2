@@ -527,4 +527,117 @@ public class RomanPrinterTest {
             assertEquals(expected, RomanPrinter.print(600));
         }
     }
+
+    @Test
+    public void TestMIPrinter(){
+        try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
+            integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1001)).thenReturn("MI");
+            String expected =
+                    " __  __   _____  \n"+
+                    "|  \\/  | |_   _| \n"+
+                    "| \\  / |   | |   \n"+
+                    "| |\\/| |   | |   \n"+
+                    "| |  | |  _| |_  \n"+
+                    "|_|  |_| |_____| \n";
+
+            assertEquals(expected, RomanPrinter.print(1001));
+        }
+    }
+
+    @Test
+    public void TestMVPrinter(){
+        try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
+            integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1005)).thenReturn("MV");
+            String expected =
+                    " __  __  __      __ \n"+
+                    "|  \\/  | \\ \\    / / \n"+
+                    "| \\  / |  \\ \\  / /  \n"+
+                    "| |\\/| |   \\ \\/ /   \n"+
+                    "| |  | |    \\  /    \n"+
+                    "|_|  |_|     \\/     \n";
+
+            assertEquals(expected, RomanPrinter.print(1005));
+        }
+    }
+
+    @Test
+    public void TestMXPrinter(){
+        try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
+            integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1010)).thenReturn("MX");
+            String expected =
+                    " __  __  __   __ \n"+
+                    "|  \\/  | \\ \\ / / \n"+
+                    "| \\  / |  \\ V /  \n"+
+                    "| |\\/| |   > <   \n"+
+                    "| |  | |  / . \\  \n"+
+                    "|_|  |_| /_/ \\_\\ \n";
+
+            assertEquals(expected, RomanPrinter.print(1010));
+        }
+    }
+
+    @Test
+    public void TestMLPrinter(){
+        try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
+            integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1050)).thenReturn("ML");
+            String expected =
+                    " __  __   _       \n"+
+                    "|  \\/  | | |      \n"+
+                    "| \\  / | | |      \n"+
+                    "| |\\/| | | |      \n"+
+                    "| |  | | | |____  \n"+
+                    "|_|  |_| |______| \n";
+
+            assertEquals(expected, RomanPrinter.print(1050));
+        }
+    }
+
+    @Test
+    public void TestMCPrinter(){
+        try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
+            integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1100)).thenReturn("MC");
+            String expected =
+                    " __  __    _____  \n"+
+                    "|  \\/  |  / ____| \n"+
+                    "| \\  / | | |      \n"+
+                    "| |\\/| | | |      \n"+
+                    "| |  | | | |____  \n"+
+                    "|_|  |_|  \\_____| \n";
+
+            assertEquals(expected, RomanPrinter.print(1100));
+        }
+    }
+
+    @Test
+    public void TestMDPrinter(){
+        try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
+            integerToRomanMockedStatic.when(()->IntegerToRoman.convert(1500)).thenReturn("MD");
+            String expected =
+                    " __  __   _____   \n"+
+                    "|  \\/  | |  __ \\  \n"+
+                    "| \\  / | | |  | | \n"+
+                    "| |\\/| | | |  | | \n"+
+                    "| |  | | | |__| | \n"+
+                    "|_|  |_| |_____/  \n";
+
+            assertEquals(expected, RomanPrinter.print(1500));
+        }
+    }
+
+    @Test
+    public void TestMMPrinter(){
+        try(MockedStatic<IntegerToRoman> integerToRomanMockedStatic = Mockito.mockStatic(IntegerToRoman.class)){
+            integerToRomanMockedStatic.when(()->IntegerToRoman.convert(2000)).thenReturn("MM");
+            String expected =
+                    " __  __   __  __  \n"+
+                    "|  \\/  | |  \\/  | \n"+
+                    "| \\  / | | \\  / | \n"+
+                    "| |\\/| | | |\\/| | \n"+
+                    "| |  | | | |  | | \n"+
+                    "|_|  |_| |_|  |_| \n";
+
+            assertEquals(expected, RomanPrinter.print(2000));
+        }
+    }
+    
 }
