@@ -93,6 +93,7 @@ public class RomanPrinter {
         else if (letter.equals("C")){number+=printC(index);}
         else if (letter.equals("D")){number+=printD(index);}
         else if (letter.equals("M")){number+=printM(index);}
+        else {throw new IllegalArgumentException(letter+" is not a roman number");}
         return number;
     }
 
