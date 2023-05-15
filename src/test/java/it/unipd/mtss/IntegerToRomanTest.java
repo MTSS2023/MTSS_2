@@ -82,6 +82,9 @@ public class IntegerToRomanTest {
     public void TestConvertNumberMajorOneThousandtoRoman(){
         convert.convert(1001);
     }
-    
+    @Test(expected = NumberFormatException.class)
+    public void TestConvertStringtoRoman(){
+        convert.convert(Integer.parseInt("a"));
+    }
 
 }
