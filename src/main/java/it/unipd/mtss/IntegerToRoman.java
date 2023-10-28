@@ -10,7 +10,7 @@ import java.util.TreeMap;
 public class IntegerToRoman {
    
    private final static TreeMap<Integer, String> map = new TreeMap<Integer, String>();
- 
+  
    static {
        map.put(1000, "M");
        map.put(900, "CM");
